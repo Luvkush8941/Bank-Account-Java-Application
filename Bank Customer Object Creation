@@ -1,0 +1,73 @@
+
+import java.util.Scanner;
+
+public class Bank_customer {
+
+    public static void main(String[] args) {
+        
+        System.out.println("\n################################################################\n");
+
+
+
+        Scanner sc = new Scanner(System.in);
+
+        bank_account C1 = new bank_account(); // Object creation
+
+        // Setting all the details of the customer-1
+
+        System.out.println("Enter your Name: ");
+        C1.setCusName(sc.nextLine());
+
+        System.out.println();
+
+        System.out.println("Enter your Account Number : ");
+        C1.setAccNum(sc.nextLong());
+
+        System.out.println();
+
+        System.out.println("Enter your Deposit Amount : ");
+        C1.DepositFunds(sc.nextLong());
+
+        System.out.println(sc.nextLine());
+       
+        System.out.println("Enter your Email Id : ");
+        C1.setEmail(sc.nextLine());
+
+        System.out.println();
+
+        System.out.println("Enter your mobile Number : ");
+        C1.setPhoneNumber(sc.nextLong());
+
+        System.out.println();
+
+        System.out.println("Enter the Amount you want to With Draw : ");
+        C1.WithDraw(sc.nextLong());
+
+        System.out.println("\n---------------------------------------\n");
+
+        // Printing all the details of the customer-1
+
+        System.out.println("Customer Name is : " + C1.getCusName());
+        System.out.println("Customer Account Number : " + C1.getAccNum() );
+        System.out.println("Customer Mobile Number : " + C1.getPhoneNumber());
+        System.out.println("Customer Email Id : " + C1.getEmail());
+        System.out.println("Current balance in your account is : " + C1.getBal());
+
+
+        System.out.println();
+        System.out.println("Enter your Deposit Amount : ");
+        C1.DepositFunds(sc.nextLong());
+
+        System.out.println("Now current balance changes to : " + C1.getBal());
+
+
+
+
+
+
+
+        System.out.println("\n################################################################\n");
+
+    }
+    
+}
