@@ -1,0 +1,76 @@
+public class bank_account
+{
+    private long account_number;
+    private long balance;;
+    private String Customer_name;
+    private String email;
+    private long phone_number;
+    private long fund;
+    private long withdraw;
+
+    // setters for each field
+
+    public void setAccNum(long acc_number)
+    {
+        this.account_number = acc_number;
+    }
+
+    public void setbalance(long bal)
+    {
+        this.balance = bal;
+
+    }
+
+    public void setCusName(String name)
+    {
+        this.Customer_name = name;
+    }
+
+    public void setEmail(String email)
+    {
+        this.email = email;
+
+    }
+
+    public void setPhoneNumber(long Phone_Number)
+    {
+        this.phone_number = Phone_Number;
+    }
+
+    // getters
+
+    public String getCusName(){return this.Customer_name;}
+    
+    public long getAccNum(){return this.account_number;}
+    
+    public long getBal(){  return this.balance;}
+
+    public String getEmail(){return this.email;}
+
+    public long getPhoneNumber(){return phone_number;}
+
+
+    // Two Additional Methods
+
+    public long DepositFunds(long funds)
+    {
+        this.fund = funds;
+        this.balance = this.balance + this.fund;
+
+        return this.fund;
+    }
+
+    public long WithDraw(long withDrawAmount)
+    {
+        this.withdraw = withDrawAmount;
+
+        if (this.fund >= this.withdraw){
+        this.balance = this.balance - this.withdraw;
+        }else{
+            System.out.println("Insufficient Fund !!!");
+        }
+
+        return this.withdraw;
+    }
+   
+}
